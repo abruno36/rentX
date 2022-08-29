@@ -4,12 +4,12 @@
 >
 > **Objetivo:**     
 >
-> App que irá registrar os **skills**
+> App que irá registrar os **Alugueis de Carros**
 
 ---
 **Protótipo:** 
 
-<img src="https://github.com/abruno36/GoFinances/blob/master/prototipo.png" alt="Protótipo"/>
+<img src="https://github.com/abruno36/rentX/blob/master/prototipo.png" alt="Protótipo"/>
 
 > **Tecnologias:** REACT-NATIVE
 >
