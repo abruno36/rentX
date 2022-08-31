@@ -20,6 +20,7 @@ criar App: **expo init GoFinances**
 Rodar App no Android: **expo start**
 >
 Configurando TS no Expo Bare
+>https://app.rocketseat.com.br/node/chapter-ii-5/group/ambiente-expo/lesson/adicionando-manualmente-o-typescript
 >https://www.notion.so/Configurando-TS-no-Expo-Bare-72ab2a6c963947308f3d166547631b46
 >
 >FONTES: **expo install expo-font @expo-google-fonts/poppins**
