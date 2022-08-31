@@ -11,10 +11,30 @@ import {
   Header,
   HeaderContent,
   TotalCars,
-
+  CarList
 } from './styles';
 
 export function Home(){
+  const carData = {
+    brand: 'Audi',
+    name: 'RS 5 Coupe',
+    rent: {
+      period: 'Ao dia',
+      price: 120,
+    },
+    thumbnail: 'https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png'
+  } 
+
+  // const carDataTwo = {
+  //   brand: 'Porsche',
+  //   name: 'Panamera',
+  //   rent: {
+  //     period: 'Ao dia',
+  //     price: 340,
+  //   },
+  //   thumbnail: 'https://purepng.com/public/uploads/large/purepng.com-porsche-panamera-white-carcarvehicletransportporsche-961524659258pfvb8.png'
+  // } 
+
   return (
     <Container>
       <StatusBar 
@@ -32,7 +52,13 @@ export function Home(){
           </TotalCars>
         </HeaderContent>
       </Header>
-      <Car />
+
+      <CarList 
+        data={[1,2,3,4,5,6,7]}
+        keyExtractor={item => String(item)}
+        renderItem={({ item }) => <Car data={carData}/>}
+      />
+   
     </Container>
   );
 }

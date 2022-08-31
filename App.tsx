@@ -32,7 +32,8 @@ export default function App() {
   //const { userStorageLoading } = useAuth();
    
   if (!fontsLoaded) {
-    return <AppLoading />
+    return
+    // return <AppLoading />
   }
   
   return (
