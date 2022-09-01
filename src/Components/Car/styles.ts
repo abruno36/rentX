@@ -56,3 +56,5 @@ export const CarImage = styled.Image`
   width:  ${RFValue(167)}px;
   height: ${RFValue(85)}px;
 `;
+
+
