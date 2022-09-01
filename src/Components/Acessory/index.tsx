@@ -17,7 +17,7 @@ export function Acessory({
 }:Props){
   return (
     <Container>
-        <Icon width={32} height={32} />;
+        <Icon width={32} height={32} />
         <Name>{name}</Name>
     </Container>
   );
