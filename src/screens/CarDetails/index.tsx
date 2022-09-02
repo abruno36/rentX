@@ -2,6 +2,7 @@ import React from 'react';
 import { BackButton } from '../../Components/BackButton';
 import { ImageSlider } from '../../Components/ImageSlider';
 import { Acessory } from '../../Components/Acessory';
+import { Button } from '../../Components/Button';
 
 import speedSvg        from '../../assets/speed.svg';
 import accelerationSvg from '../../assets/acceleration.svg';
@@ -23,7 +24,8 @@ import {
   Period,
   Price,
   About,
-  Acessories
+  Acessories,
+  Footer
 } from './styles';
 
 export function CarDetails(){
@@ -60,7 +62,20 @@ export function CarDetails(){
                 indultado na praça Real Maestranza de Sevilla. 
                 É um belíssimo carro para quem gosta de acelerar.
         </About>
+        <About>Este é automóvel desportivo. Surgiu do lendário touro de lide 
+                indultado na praça Real Maestranza de Sevilla. 
+                É um belíssimo carro para quem gosta de acelerar.
+        </About>
+        <About>Este é automóvel desportivo. Surgiu do lendário touro de lide 
+                indultado na praça Real Maestranza de Sevilla. 
+                É um belíssimo carro para quem gosta de acelerar.
+        </About>
       </Content>
+
+      <Footer>
+        <Button title="Confirmar"/>
+      </Footer>
+
     </Container>
   );
 }
