@@ -1,5 +1,7 @@
 import React from 'react';
 import { useWindowDimensions, StatusBar } from 'react-native';
+import { ParamListBase, NavigationProp, useNavigation } from '@react-navigation/native';
+
 
 import LogoSvg from '../../assets/logo_background_gray.svg';
 import DoneSvg from '../../assets/done.svg';
@@ -14,6 +16,18 @@ import {
 } from './styles';
 
 export function SchedulingComplete(){
+
+  const navigation = useNavigation<NavigationProp<ParamListBase>>();
+  
+  function handleConfirmRental(){
+    navigation.navigate('Home');
+  } 
+
+  function handleGoBack() {
+    if (navigation.canGoBack())
+      navigation.goBack()
+  }
+  
     const { width } = useWindowDimensions();
   return (
     <Container>
@@ -34,7 +48,7 @@ export function SchedulingComplete(){
             </Message>
         </Content>
         <Footer>
-           <ConfirmButton title='Ok'/>
+           <ConfirmButton title='Ok' onPress={handleConfirmRental}/>
         </Footer>
 
     </Container>

@@ -6,6 +6,7 @@ import { Button } from '../../Components/Button';
 import { useTheme } from 'styled-components';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { Feather } from '@expo/vector-icons';
+import { ParamListBase, NavigationProp, useNavigation } from '@react-navigation/native';
 
 import speedSvg        from '../../assets/speed.svg';
 import accelerationSvg from '../../assets/acceleration.svg';
@@ -42,10 +43,22 @@ import {
 
 export function SchedulingDetails(){
   const theme = useTheme();
+
+  const navigation = useNavigation<NavigationProp<ParamListBase>>();
+  
+  function handleConfirm(){
+    navigation.navigate('SchedulingComplete');
+  } 
+
+  function handleGoBack() {
+    if (navigation.canGoBack())
+      navigation.goBack()
+  }
+
   return (
     <Container>
       <Header>
-        <BackButton onPress={() => {}}/>
+        <BackButton onPress={handleGoBack}/>
       </Header>
 
       <CarImages>
@@ -109,7 +122,10 @@ export function SchedulingDetails(){
       </Content>
 
       <Footer>
-        <Button title="Confirmar"/>
+        <Button 
+           title="Alugar agora" 
+           color={theme.colors.success} 
+           onPress={handleConfirm}/>
       </Footer>
 
     </Container>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { ParamListBase, NavigationProp, useNavigation } from '@react-navigation/native';
+
 import { BackButton } from '../../Components/BackButton';
 import { ImageSlider } from '../../Components/ImageSlider';
 import { Acessory } from '../../Components/Acessory';
@@ -28,7 +30,15 @@ import {
   Footer
 } from './styles';
 
+
 export function CarDetails(){
+
+  const navigation = useNavigation<NavigationProp<ParamListBase>>();
+  
+  function handleConfirmRental(){
+    navigation.navigate('Scheduling');
+  } 
+  
   return (
     <Container>
       <Header>
@@ -65,7 +75,7 @@ export function CarDetails(){
       </Content>
 
       <Footer>
-        <Button title="Confirmar"/>
+        <Button title="Escolher período do aluguel" onPress={handleConfirmRental}/>
       </Footer>
 
     </Container>
