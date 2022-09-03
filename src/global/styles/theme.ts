@@ -6,7 +6,7 @@ export default {
         background_secondary: '#FFFFFF',
 
         text: '#7A7A80',
-        text_detail: '#AEAED3',
+        text_detail: '#AEAEB3',
         text_dark: '#000000',
 
         title: '#47474D',
@@ -14,7 +14,7 @@ export default {
         line: '#EBEBF0',
 
         main: '#DC1637',
-        main_ligth: '#FDEFEF',
+        main_light: '#FDEFEF',
 
         success: '#03B252',
        

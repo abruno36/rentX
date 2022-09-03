@@ -18,7 +18,7 @@ import {
   
 } from '@expo-google-fonts/archivo';
 
-import { CarDetails } from './src/screens/CarDetails';
+import { SchedulingComplete } from './src/screens/SchedulingComplete';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -38,7 +38,7 @@ export default function App() {
   
   return (
     <ThemeProvider theme={theme}>
-      <CarDetails />
+      <SchedulingComplete />
     </ThemeProvider>
   )
 }
