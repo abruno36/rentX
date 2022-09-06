@@ -16,4 +16,4 @@ export interface CarDTO
         name: string;
       }[];
     photos: string[];
-  }
+}
