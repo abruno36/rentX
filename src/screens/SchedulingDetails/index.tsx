@@ -1,7 +1,7 @@
 import React from 'react';
 import { BackButton } from '../../Components/BackButton';
 import { ImageSlider } from '../../Components/ImageSlider';
-import { Acessory } from '../../Components/Acessory';
+import { Acessory } from '../../Components/Accessory';
 import { Button } from '../../Components/Button';
 import { useTheme } from 'styled-components';
 import { RFValue } from 'react-native-responsive-fontsize';

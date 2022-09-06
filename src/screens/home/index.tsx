@@ -7,7 +7,9 @@ import Logo from '../../assets/logo.svg';
 import { api } from '../../services/api';
 import { CarDTO } from '../../dtos/CarDTO';
 
-import { Car } from '../../Components/Car';
+import { Car }  from '../../Components/Car';
+
+import { Load } from '../../Components/Load';
 
 import {
   Container,
@@ -20,20 +22,10 @@ import {
 export function Home(){
   const [cars, setCars] = useState<CarDTO[]>([]);
   const [loading, setLoading] =  useState(true);
-  const carData = {
-    brand: 'Audi',
-    name: 'RS 5 Coupe',
-    rent: {
-      period: 'Ao dia',
-      price: 120,
-    },
-    thumbnail: 'https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png'
-  } 
-
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
   
-  function handleCarDetails(){
-    navigation.navigate('CarDetails');
+  function handleCarDetails(car: CarDTO){
+    navigation.navigate('CarDetails', { car });
   } 
 
   useEffect(() => {
@@ -69,13 +61,13 @@ export function Home(){
           </TotalCars>
         </HeaderContent>
       </Header>
-
-      <CarList 
-        data={cars}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) => <Car data={item} onPress={handleCarDetails}/>}
-      />
-   
+      {loading ? <Load /> :
+        <CarList 
+          data={cars}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => <Car data={item} onPress={() => handleCarDetails(item)}/>}
+        />
+      }
     </Container>
   );
 }
