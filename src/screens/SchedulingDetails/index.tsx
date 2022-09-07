@@ -12,7 +12,7 @@ import { CarDTO } from "../../dtos/CarDTO";
 import { BackButton } from "../../Components/BackButton";
 import { ImageSlider } from "../../Components/ImageSlider";
 import { Accessory } from "../../Components/Accessory";
-import { Button } from "../../components/Button";
+import { Button } from "../../Components/Button";
 
 import { getAccessoryIcons } from "../../utils/getAccessoryIcons";
 import { getPlataformDate } from "../../utils/getPlataformDate";
