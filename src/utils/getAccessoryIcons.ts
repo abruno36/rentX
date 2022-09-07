@@ -22,7 +22,7 @@ const icons: { [key: string]: React.FC<SvgProps> } = {
   'seats': PeopleSvg,
 }
 
-export function getAccessoryIcon(type: string) {
+export function getAccessoryIcons(type: string) {
 
   return icons[type] || CarSvg
 }
@@ -38,7 +38,7 @@ export function getAccessoryIcon(type: string) {
 // import PeopleSvg from "../assets/people.svg";
 // import CarSvg from "../assets/car.svg";
 
-// export function getAccessoryIcon(type: string) {
+// export function getAccessoryIcons(type: string) {
 //   switch (type) {
 //     case "speed":
 //       return SpeedSvg;

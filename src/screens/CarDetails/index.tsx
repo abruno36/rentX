@@ -1,12 +1,12 @@
-import React from 'react';
-import { ParamListBase, NavigationProp, useNavigation, useRoute } from '@react-navigation/native';
+import React from "react";
+import { ParamListBase, NavigationProp, useNavigation, useRoute } from "@react-navigation/native";
 
-import { BackButton } from '../../Components/BackButton';
-import { ImageSlider } from '../../Components/ImageSlider';
-import { Accessory } from '../../Components/Accessory';
-import { Button } from '../../Components/Button';
+import { BackButton } from "../../Components/BackButton";
+import { ImageSlider } from "../../Components/ImageSlider";
+import { Accessory } from "../../Components/Accessory";
+import { Button } from "../../Components/Button";
 
-import { getAccessoryIcon } from '../../utils/getAccessoryIcon';
+import { getAccessoryIcons } from "../../utils/getAccessoryIcons";
 
 import {
   Container,
@@ -23,8 +23,9 @@ import {
   About,
   Accessories,
   Footer
-} from './styles';
-import { CarDTO } from '../../dtos/CarDTO';
+} from "./styles";
+
+import { CarDTO } from "../../dtos/CarDTO";
 
 interface Params {
   car: CarDTO;
@@ -38,7 +39,7 @@ export function CarDetails(){
   const { car } = route.params as Params;
   
   function handleConfirmRental(){
-    navigation.navigate('Scheduling');
+    navigation.navigate('Scheduling', { car });
   } 
 
   function handleGoBack() {
@@ -73,7 +74,7 @@ export function CarDetails(){
                <Accessory 
                   key={accessory.type}
                   name={accessory.name} 
-                  icon={getAccessoryIcon(accessory.type)}
+                  icon={getAccessoryIcons(accessory.type)}
                />
             ))
           }

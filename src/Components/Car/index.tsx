@@ -1,7 +1,7 @@
 import React from 'react';
 import { RectButtonProps } from 'react-native-gesture-handler';
 
-import { getAccessoryIcon } from '../../utils/getAccessoryIcon';
+import { getAccessoryIcon } from '../../utils/getAccessoryIcons';
 
 import { CarDTO } from '../../dtos/CarDTO';
 
