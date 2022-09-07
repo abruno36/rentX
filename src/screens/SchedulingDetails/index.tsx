@@ -92,7 +92,7 @@ export function SchedulingDetails(){
             id: car.id,
             unavailable_dates
         })
-        .then(response => navigator.navigate("SchedulingComplete"))
+        .then(()  => navigator.navigate("SchedulingComplete"))
         .catch(() => {
             setLoading(false)
             Alert.alert("Não foi possível fazer o agendamento");
