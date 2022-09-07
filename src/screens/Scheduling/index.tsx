@@ -57,14 +57,10 @@ export function Scheduling() {
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
 
   function handleConfirmRental() {
-    if(!rentalPeriod.startFormatted ||!rentalPeriod.endFormatted){
-      Alert.alert("Selecione o intervalo para alugar!")
-    }else{
       navigation.navigate("SchedulingDetails", {
         car,
         dates: Object.keys(marketDates)
       });
-    }
   }
 
   function handleGoBack() {
@@ -134,7 +130,7 @@ export function Scheduling() {
         <Button
           title="Confirmar"
           onPress={handleConfirmRental}
-          //enabled={!!rentalPeriod.startFormatted}
+          enabled={!!rentalPeriod.startFormatted}
         />
       </Footer>
     </Container>

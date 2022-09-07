@@ -39,14 +39,13 @@ export function SchedulingComplete(){
         
         <LogoSvg width={width} />
 
-        <Content>
-            <DoneSvg width={80} height={80}/>
-            <Title>Carro Alugado!</Title>
-            <Message> Agora você só precisa ir {'\n'}
-                      até a concessionária da RENTX {'\n'}
-                      pegar o seu automóvel.
-            </Message>
-        </Content>
+            <Content>
+                <DoneSvg width={80} height={80} />
+                <Title>Carro alugado!</Title>
+                <Message>Agora você só precisa ir {'\n'}
+                    até a concessionária da RENTX {'\n'}
+                    pegar o seu automóvel.</Message>
+            </Content>
         <Footer>
            <ConfirmButton title='Ok' onPress={handleConfirmRental}/>
         </Footer>

@@ -188,7 +188,7 @@ export function SchedulingDetails(){
                     color={theme.colors.success} 
                     onPress={handleConfirmRental}
                     enabled={!loading}
-                    //loading={loading}
+                    loading={loading}
                 />
             </Footer>
             
