@@ -9,7 +9,7 @@ import {
 } from "@react-navigation/native";
 
 import { format } from "date-fns";
-import { getPlataformDate } from "../../utils/getPlataformDate";
+import { getPlatformDate } from "../../utils/getPlatformDate";
 import { CarDTO } from '../../dtos/CarDTO';
 
 import { BackButton } from "../../Components/BackButton";
@@ -85,8 +85,8 @@ export function Scheduling() {
     const endDate = Object.keys(interval)[Object.keys(interval).length - 1];
 
     setRentalPeriod({
-      startFormatted: format(getPlataformDate(new Date(firstDate)), "dd/MM/yyyy"),
-      endFormatted: format(getPlataformDate(new Date(endDate)), "dd/MM/yyyy"),
+      startFormatted: format(getPlatformDate(new Date(firstDate)), "dd/MM/yyyy"),
+      endFormatted: format(getPlatformDate(new Date(endDate)), "dd/MM/yyyy"),
     });
   }
   return (

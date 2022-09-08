@@ -15,7 +15,7 @@ import { Accessory } from "../../Components/Accessory";
 import { Button } from "../../Components/Button";
 
 import { getAccessoryIcons } from "../../utils/getAccessoryIcons";
-import { getPlataformDate } from "../../utils/getPlataformDate";
+import { getPlatformDate } from "../../utils/getPlatformDate";
 
 import{
     Container,
@@ -84,8 +84,8 @@ export function SchedulingDetails(){
         await api.post('schedules_byuser', {
             user_id: 1,
             car,
-            startDate:format(getPlataformDate(new Date(dates[0])), 'dd/MM/yyyy'),
-            endDate:format(getPlataformDate(new Date(dates[dates.length - 1])), 'dd/MM/yyyy'),
+            startDate:format(getPlatformDate(new Date(dates[0])), 'dd/MM/yyyy'),
+            endDate:format(getPlatformDate(new Date(dates[dates.length - 1])), 'dd/MM/yyyy'),
         })
 
         api.put(`/schedules_bycars/${car.id}`, {
@@ -101,8 +101,8 @@ export function SchedulingDetails(){
 
     useEffect(()=>{
         setRentalPeriod({
-            start:format(getPlataformDate(new Date(dates[0])), 'dd/MM/yyyy'),
-            end:format(getPlataformDate(new Date(dates[dates.length - 1])), 'dd/MM/yyyy'),
+            start:format(getPlatformDate(new Date(dates[0])), 'dd/MM/yyyy'),
+            end:format(getPlatformDate(new Date(dates[dates.length - 1])), 'dd/MM/yyyy'),
         })
     }, [])
     return(
